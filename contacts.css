@@ -1,0 +1,58 @@
+/* Update contacts.css */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-item .icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-item .label {
+  color: var(--primary);
+  font-weight: bold;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.contact-item .value {
+  color: var(--text);
+  word-break: break-word;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form specific styles */
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form .form-label {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-item {
+    flex-direction: column;
+  }
+
+  .contact-item .label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}
+

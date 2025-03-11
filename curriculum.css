@@ -1,0 +1,383 @@
+/* Update curriculum.css */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.info-item .icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.info-item .label {
+  color: var(--primary);
+  font-weight: bold;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.info-item .value {
+  color: var(--text);
+  word-break: break-word;
+}
+
+.education-item {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.education-item h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.education-item p {
+  margin-bottom: 0.5rem;
+}
+
+.certificate-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.certificate-link:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  box-shadow: var(--neon-glow);
+}
+
+.quest-item {
+  padding: 1.5rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.quest-item h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.quest-preview {
+  margin-top: 1.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  overflow: scroll;
+}
+
+.quest-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit:fill;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-item .label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .education-item {
+    margin-bottom: 1rem;
+  }
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  height: auto;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.education-item {
+  padding: 1rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.quest-item {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.info-item {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.skills .card-body {
+  padding-bottom: 0.5rem;
+}
+
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-bars {
+  margin-bottom: 0;
+}
+
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Adjust spacing for profile photo */
+.profile-photo .photo-frame {
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .education-item,
+  .quest-item,
+  .info-item {
+    padding: 0.75rem;
+  }
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.05);
+}
+
+.quest-preview {
+  display: flex; /* Dispone le immagini in riga */
+  overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+  /* scroll-snap-type: x mandatory; */
+  gap: 10px; /* Spazio tra le immagini */
+  padding-bottom: 10px; /* Distanza per evitare il taglio delle immagini */
+  /* cursor: grab;*/
+}
+
+.quest-preview img {
+  flex: 0 0 auto; /* Impedisce il ridimensionamento automatico */
+  height: auto; /* Occupa tutta la larghezza del contenitore */
+  max-width: 600px; /* Limita la dimensione massima dell'immagine */
+  scroll-snap-align: start; /* Allinea l'immagine all'inizio dello scorrimento */
+  border-radius: 10px; /* Angoli arrotondati per estetica */
+}
+
+/* Mostra la scrollbar su tutti i dispositivi */
+.quest-preview::-webkit-scrollbar {
+  height: 8px; /* Altezza della scrollbar per il desktop */
+}
+
+.quest-preview::-webkit-scrollbar-thumb {
+  background: #888; /* Colore del "pollice" della scrollbar */
+  border-radius: 10px;
+}
+
+.quest-preview::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Colore della traccia della scrollbar */
+}
+
+.quest-preview {
+  -ms-overflow-style: auto; /* Per Internet Explorer e Edge */
+  scrollbar-width: auto; /* Per Firefox */
+}
+
+.quest-preview::-webkit-scrollbar {
+  height: 12px;
+}
+
+.quest-preview::-webkit-scrollbar-track {
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+}
+
+.quest-preview::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+  border: 2px solid var(--surface);
+}
+
+p{
+  color: var(--text);
+}
+
+
+
+
+
+
+.curriculum-grid .row {
+  display: flex;
+  margin: 0 -12px;
+}
+
+.curriculum-grid .col-lg-4,
+.curriculum-grid .col-lg-8 {
+  padding: 0 12px;
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile photo styles */
+.profile-photo .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info section styles */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.info-item .icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.info-item .label {
+  color: var(--primary);
+  font-weight: bold;
+  min-width: 80px;
+}
+
+.info-item .value {
+  color: var(--text);
+  word-break: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .curriculum-grid .row {
+    flex-direction: column;
+  }
+
+  .curriculum-grid .col-lg-4,
+  .curriculum-grid .col-lg-8 {
+    width: 100%;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-item .label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}
